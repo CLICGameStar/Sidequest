@@ -76,21 +76,24 @@
       <div class="col-12">
         <h2>Règles générales</h2>
         <ul>
-          <li>Les rencontres sont gérées par les joueur·euse·s. Si ce n'est pas déjà fait, rejoindre le discord de Game*. Il sera utilisé pour l'organisation des rencontres par les participants et pour la modération du tournois par Game*.</li>
+          <li>Les rencontres sont gérées par les joueur·euse·s. Si ce n'est pas déjà fait, rejoindre le discord de <a href="https://discord.gg/w8gdZgwM" target="_blank">Game*</a>. Il sera utilisé pour l'organisation des rencontres par les participants et pour la modération du tournois par Game*.</li>
           <li>À la fin de chaque rencontre, veuillez reporter l'issue de la partie sur le formulaire ci-dessous.</li>
           <li>En cas de litige, si aucune preuve n'est apportée (e.g., une capture d'écran), les deux équipes seront
             marquées comme perdantes.</li>
           <li>Le tournoi se déroule en deux phases : Une phase de qualifications, puis un arbre simple pour les 4 meilleures joueurs de la poule, cette phase se déroulant en présentiel.</li>
-          <li></li>
+          <li>Pour la phase de qualification, chaque participants jouera le même nombre de match. Une victoire rapporte 1 point et une défaite 0. Les quatres joueurs avec le plus de points seront qualifié pour la phase de finale.</li>
+          <li>Si un participants se désiste ou ne donne plus de signe de vie, il sera disqualifié et sera déclaré perdant pour les rencontres qu'il n'a pas encore fini.</li>
         </ul>
       
-
-        <div class="col-12">
         <h2>Règles spécifiques au jeu</h2>
         <ul> 
-          <li></li>
+          <li>Les rencontres sont des affrontement en 1v1, sur une carte de taille petite (196 tuiles).</li>
+          <li>Le mode de jeu est Puissance (Might).</li>
+          <li>Les tribus spéciales (Aquarion, ∑∫ỹriȱŋ, Polaris, Cymanti) sont interdites.</li>
+          <li>Les parties doivent être lancées avec une limite de temps par tour de 24h.</li>
+          <li>Il est autorisé (et encouragé) de jouer plusieurs matches en même temps.</li>
+          <li>En cas d'égalité, un deuxième match sera joué, mais cette fois ci sur une carte de 121 tuiles (tiny) et la limite de temps par tour "Live Game".</li> 
         </ul>
-    </div>
 
     <!-- Arbre de participation -->
   <div class="row">
@@ -203,7 +206,7 @@
 
   <script>
     <!-- Information du tour en cours -->
-    var endDateBase = new Date("2024-12-13 18:30:00");
+    var endDateBase = new Date("2025-10-16 18:00:00");
     var endQualifs = new Date("2025-10-16 00:00:00");
 
     var endDate = endDateBase.getTime();
@@ -211,7 +214,7 @@
 
     var ends = [end, endDate];
 
-    var reasons = ["pour soumettre ta run", "avant la finale"];
+    var reasons = ["pour les qualifications", "avant la finale"];
     var timer = setInterval(function () {
       let now = new Date().getTime(); 
        //Find first date in ends that is after now var
