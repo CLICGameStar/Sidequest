@@ -6,12 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="icon" href="./assets/img/favicons/favicon.ico">
+  <link rel="icon" href="../assets/img/favicons/favicon.ico">
 
   <title>Sidequest</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- FontAwesome CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
@@ -19,7 +19,7 @@
     crossorigin="anonymous" />
 
   <!-- Custom styles for this template -->
-  <link href="./assets/css/sticky-footer.css" rel="stylesheet">
+  <link href="../assets/css/sticky-footer.css" rel="stylesheet">
 </head>
 
 <body>
@@ -59,11 +59,11 @@
     <!-- Informations générales -->
     <div class="row justify-content-center">
       <div class="col-lg-6 col-md-12 text-center">
-        <h2>Tournoi : Clash Royale</h2>
-        <img class="mw-100" src="./assets/img/clashroyale.webp" width="400" />
+        <h2>Tournoi : The battle of Polytopia</h2>
+        <img class="mw-100" src="../assets/img/polytopia.webp" width="400" />
         <div id="timer"></div> <!-- Modifier tout en bas pour changer le timer ! -->
-        <p>Qualifications en ligne : <br /><strong>Du 11 novembre jusqu'au 25 novembre à 11h59</strong></p>
-        <p>Finale en présentiel :<br /><strong>Jeudi 27 novembre. Horaire: 18h30.</strong></p>
+        <p>Qualifications en ligne : <br /><strong>Du 7 octobre jusqu'au 15 octobre à 23h59</strong></p>
+        <p>Finale en présentiel :<br /><strong>Jeudi 16 octobre. Horaire: 18h30, Lieu: BC02 .</strong></p>
       </div>
     </div>
 
@@ -94,7 +94,12 @@
       
         <h2>Règles spécifiques au jeu</h2>
         <ul> 
-          <li>A definir</li>
+          <li>Les rencontres sont des affrontement en 1v1, sur une carte de taille petite (196 tuiles).</li>
+          <li>Le mode de jeu est Puissance (Might).</li>
+          <li>Les tribus spéciales (Aquarion, ∑∫ỹriȱŋ, Polaris, Cymanti) sont interdites.</li>
+          <li>Les parties doivent être lancées avec une limite de temps par tour de 24h.</li>
+          <li>Il est autorisé (et encouragé) de jouer plusieurs matches en même temps. Si un match n'est pas fini à la fin des qualifications (le 15.10 à 23h59) le·la participant·e avec le score le plus élevé sera désigné·e gagnant·e.</li>
+          <li>En cas d'égalité, un deuxième match sera joué, mais cette fois-ci sur une carte de 121 tuiles (tiny) et la limite de temps par tour "Live Game".</li> 
         </ul>
       </div>
     </div>
@@ -205,26 +210,24 @@
 
 
 
-  <script src="./assets/js/jquery-1.12.4.min.js"></script>
-  <script src="./assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/jquery-1.12.4.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
 
   <script>
     <!-- Information du tour en cours -->
-    var endDateBase = new Date("2025-11-27 18:30:00");
-    var endQualifs = new Date("2025-11-25 12:00:00");
-    var endInscriptions = new Date("2025-11-9 23:59:59");
+    var endDateBase = new Date("2025-10-16 18:30:00");
+    var endQualifs = new Date("2025-10-16 00:00:00");
 
-    var endInscr = endInscriptions.getTime();
     var endDate = endDateBase.getTime();
     var end = endQualifs.getTime();
 
-    var ends = [endInscr, end, endDate];
+    var ends = [end, endDate];
 
-    var reasons = [ "pour les inscriptions", "pour les qualifications", "avant la finale"];
+    var reasons = ["pour les qualifications", "avant la finale"];
     var timer = setInterval(function () {
       let now = new Date().getTime(); 
        //Find first date in ends that is after now var
-        i = 0; while (i < 3 && ends[i] < now) { i++; } let t = ends[i] - now; 
+        i = 0; while (i < 2 && ends[i] < now) { i++; } let t = ends[i] - now; 
         if (t >= 0) {
 
           let days = Math.floor(t / (1000 * 60 * 60 * 24));
