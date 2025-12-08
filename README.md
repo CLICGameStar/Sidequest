@@ -18,7 +18,8 @@ D'abord, dans le Drive, créer un nouveau document de bracket. Ensuite, modifier
    * S'il y a des règles générales (= pour tous les tournois) à ajouter, les ajouter sous `Règles générales`.
    * Ajouter les règles spécifiques sous `Règles spécifiques au jeu`.
 3. Sous `<!-- Arbre de participation -->`, changer le lien du Google Spreadsheets vers celui du tournoi effectif.
-4. Si nécessaire, compléter la partie `<!-- Foire Aux Questions -->`.
+5. Si nécessaire, compléter la partie `<!-- Foire Aux Questions -->`.
 
+Dans 'old.html' ajouter à la fin de la liste pages un élément pour le dernier tournoi.
 ### Utiliser la page du tournoi
 Pour chaque phase/tour, il faut manuellement mettre à jour le site avec la raison et la date de fin. Pour cela, tout en bas, après `<!-- Information du tour en cours -->`, il faut modifier la variable `endDateBase` avec la date de fin de la phase, et la variable `reason` avec le nom de la phase.
