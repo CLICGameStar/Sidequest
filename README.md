@@ -8,6 +8,7 @@ Note : les modifications se font automatiquement sur le site Internet lorsque le
 1. Copier le fichier `index.html`, et le coller dans le dossier `old`.
 2. Renommer cette copie avec le format `nom-du-tournoi-XXXX.html`, avec XXXX correspondant à l'année du tournoi.
 3. Dans cette copie, remplacer tous les `./` par des `../` (pour ne pas casser le lien avec le fichier CSS et les images).
+4. Rajouter dans le ficher `old.html`, à la liste pages un élement de style `nom-du-tournoi-XXX`, avec XXXX correspondant à l'année du tournoi.
 
 ### Créer un nouveau tournoi
 D'abord, dans le Drive, créer un nouveau document de bracket. Ensuite, modifier le fichier `index.html` avec les informations du tournoi :
